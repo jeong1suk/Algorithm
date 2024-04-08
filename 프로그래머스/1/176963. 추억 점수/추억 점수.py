@@ -1,15 +1,11 @@
 def solution(name, yearning, photo):
     answer = []
-    aa = dict()
-    for i in range(len(name)):
-        aa[name[i]] = yearning[i]
+    dictionary = dict(zip(name, yearning))
     
-    for idx, names in enumerate(photo):
-        # print(f"idx={idx}, names={names}")
+    for names in photo:
         score = 0
         for name in names:
-            for k, v in aa.items():
-                if name == k:
-                    score += v
+            if name in dictionary:
+                score += dictionary[name]
         answer.append(score)
     return answer
