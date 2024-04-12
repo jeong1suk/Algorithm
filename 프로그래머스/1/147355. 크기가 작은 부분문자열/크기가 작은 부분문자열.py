@@ -2,9 +2,7 @@ def solution(t, p):
     answer = 0
     
     l = len(p)
-    for i in range(len(t) - l):
-        if t[i:i+l] <= p:
+    for i in range(len(t) - len(p) + 1):
+        if t[i:i+len(p)] <= p:
             answer += 1
-    if t[-l:] <= p:
-        answer += 1
     return answer
