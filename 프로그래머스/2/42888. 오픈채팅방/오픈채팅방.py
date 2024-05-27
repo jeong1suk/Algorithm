@@ -7,12 +7,7 @@ def solution(record):
         if op == 'Enter' or op == 'Change':
             name = r.split()[2]
             user_id[ID] = name
-            # if ID in user_id.keys():
-                # user_id[ID] = name
-        # elif op == 'Change':
-        #     name = r.split()[2]
-        #     if ID in user_id.keys():
-        #         user_id[ID] = name
+
         rec.append([op, ID])
     
     for o, i in rec:
