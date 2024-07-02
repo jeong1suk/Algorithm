@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+N, no = input().split()
+numbers = list(map(str, input().split()))
+cnt = int(N)
+for num in numbers:
+	if no in num:
+		cnt -= 1
+print(cnt)
